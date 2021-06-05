@@ -53,4 +53,15 @@
    ```sh 
    ansible all -m ping
    ```
-###Ansible to Install and Set Up Docker on Ubuntu
+### Ansible to Install and Set Up Docker on Ubuntu
+
+The first thing we need to do is obtain the Docker playbook and its dependencies from the do-community/ansible-playbooks repository. We need to clone this repository to a local folder inside the Ansible Control Node.
+
+1. Clone Ansible Playbook
+   ```sh 
+  git clone https://github.com/do-community/ansible-playbooks.git
+  cd ansible-playbooks
+   ```
+ 
+
+
