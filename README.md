@@ -58,10 +58,23 @@
 The first thing we need to do is obtain the Docker playbook and its dependencies from the do-community/ansible-playbooks repository. We need to clone this repository to a local folder inside the Ansible Control Node.
 
 1. Clone Ansible Playbook
-   ```sh 
-  git clone https://github.com/do-community/ansible-playbooks.git
-  cd ansible-playbooks
+   ```sh
+   git clone https://github.com/do-community/ansible-playbooks.git
+   cd ansible-playbooks
    ```
- 
+ The files we’re interested in are located inside the docker_ubuntu1804 folder, which has the following structure:
+
+1. Access the docker_ubuntu1804 directory and open the vars/default.yml and edit the yml file according to your need of number of containter, name, etc.
+    ```sh
+    cd docker_ubuntu1804
+    nano vars/default.yml
+    ```
+We're now ready to run this playbook on one or more servers. We can use the -l flag to make sure that only a subset of servers, or a single server, is affected by the playbook. We can also use the -u flag to specify which user on the remote server we’re using to connect and execute the playbook commands on the remote hosts.
+1. To execute the playbook only on server1, connecting as User1, you can use the following command:
+```sh
+ansible-playbook playbook.yml -l server1 -u User1
+```
+
+
 
 
