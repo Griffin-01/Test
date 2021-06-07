@@ -144,7 +144,7 @@ We're now ready to run this playbook on one or more servers. We can use the -l f
      group: root
      mode: 0644
      ```
-  3. SSH hardning playbook, in this playbook we have define rules to secure our ssh from any priviledge escalation.
+  3. SSH hardning playbook, in this playbook we have define rules to secure our ssh from any priviledge escalation and also to stop any unwanted services and softwares.
   ```sh
       ---
 
